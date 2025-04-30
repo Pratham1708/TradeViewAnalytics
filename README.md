@@ -42,6 +42,7 @@ Open this file in Power BI Desktop to interact with the visualizations.
 4. Create a `.env` file and add your API key like this:
    ```env
    TWELVEDATA_API_KEY=your_api_key_here
+   
 ## Run the Python script:
 python main.py
 Open dashboard.pbix in Power BI Desktop to view the analytics.
