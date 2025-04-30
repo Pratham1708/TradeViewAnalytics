@@ -49,6 +49,7 @@ Open this file in Power BI Desktop to interact with the visualizations.
 python main.py
 ```
 Then open dashboard.pbix in Power BI Desktop to view the analytics.
+
 Click Refresh under the Home tab in Power BI to load the latest stock data.
 
 ## Directory Structure
@@ -60,5 +61,5 @@ TradeView Analytics/
 ├── .gitignore                   # Git ignore rules
 └── README.md                    # Project documentation
 ```
-License
+## License
 This project is licensed under the MIT License.
