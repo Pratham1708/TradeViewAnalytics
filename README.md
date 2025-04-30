@@ -43,19 +43,22 @@ Open this file in Power BI Desktop to interact with the visualizations.
    ```env
    TWELVEDATA_API_KEY=your_api_key_here
    
-## Run the Python script:
+## Run the Python Script
+
+```bash
 python main.py
-Open dashboard.pbix in Power BI Desktop to view the analytics.
-Click Refresh under Home tab to get latest stock data.
+```
+Then open dashboard.pbix in Power BI Desktop to view the analytics.
+Click Refresh under the Home tab in Power BI to load the latest stock data.
 
 ## Directory Structure
-
+```
 TradeView Analytics/
 ├── main.py                      # Core data processing script
 ├── dashboard.pbix               # Power BI dashboard file
 ├── last_month_stock_data.csv    # Sample dataset
 ├── .gitignore                   # Git ignore rules
 └── README.md                    # Project documentation
-
+```
 License
 This project is licensed under the MIT License.
