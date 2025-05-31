@@ -67,5 +67,3 @@ TradeView Analytics/
 ├── .gitignore                   # Git ignore rules
 └── README.md                    # Project documentation
 ```
-## License
-This project is licensed under the MIT License.
