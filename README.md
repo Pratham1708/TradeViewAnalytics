@@ -15,24 +15,32 @@ It uses a historical stock dataset and generates insights through a Power BI das
 
 To fetch live stock data using the script, you'll need to sign up and get a free API key from Twelve Data.
 
-## How It Works
+# ⚙️ How It Works
 
-### 1. Data Input
+## 1. Data Input
 
-The script `main.py` can either read the stock data from `last_month_stock_data.csv` or use the Twelve Data API to fetch live data. This requires a valid API key.
+- Run the Python script `main.py`.
+- The script prompts the user to **select one of the 30 predefined stocks**.
+- Once selected, the script uses the **Twelve Data API** to fetch **real-time stock data for the past month**.
+- The data is saved to `last_month_stock_data.csv`.
 
-### 2. Data Processing
+## 2. Data Processing
 
-The script performs basic data manipulation including:
+The script performs the following steps:
 
-- Reading the CSV file or making an API call.
-- Cleaning and formatting data.
-- Preparing the data for visualization.
+- Makes an API call to Twelve Data using the selected stock symbol.
+- Cleans and structures the returned data.
+- Saves the processed stock data to `last_month_stock_data.csv` for use in Power BI.
 
-### 3. Output and Visualization
+## 3. Output and Visualization
 
-Once processed, the data can be visualized using the provided Power BI dashboard file `dashboard.pbix`. 
-Open this file in Power BI Desktop to interact with the visualizations.
+- Open `dashboard.pbix` in **Power BI Desktop**.
+- Click **Refresh** under the *Home* tab to load the updated data.
+- Use the **stock slicer** to select the stock you fetched via Python.
+- The dashboard then shows the **latest one-month performance and analysis**.
+
+> Stock logos are integrated from `stock_logos.csv` using Clearbit, providing visual context and company branding in the dashboard.
+
 
 ## Usage
 
