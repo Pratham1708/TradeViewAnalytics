@@ -10,10 +10,39 @@ load_dotenv()
 API_KEY = os.getenv('TWELVEDATA_API_KEY')
 
 # Sample stock symbols
-sample_symbols = ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA",
-                  "NVDA", "META", "NFLX", "INTC", "ADBE",
-                  "ORCL", "IBM", "AMD", "BA", "BABA",
-                  "DIS", "PEP", "KO", "NKE", "PYPL"]
+sample_symbols = [
+    "AAPL",     # Apple
+    "MSFT",     # Microsoft
+    "GOOGL",    # Alphabet (Google)
+    "AMZN",     # Amazon
+    "TSLA",     # Tesla
+    "META",     # Meta (Facebook)
+    "NFLX",     # Netflix
+    "NVDA",     # Nvidia
+    "ADBE",     # Adobe
+    "INTC",     # Intel
+    "ORCL",     # Oracle
+    "IBM",      # IBM
+    "AMD",      # Advanced Micro Devices
+    "CRM",      # Salesforce
+    "PYPL",     # PayPal
+    "UBER",     # Uber
+    "LYFT",     # Lyft
+    "DIS",      # Disney
+    "KO",       # Coca-Cola
+    "PEP",      # PepsiCo
+    "WMT",      # Walmart
+    "COST",     # Costco
+    "NKE",      # Nike
+    "SBUX",     # Starbucks
+    "BA",       # Boeing
+    "GM",       # General Motors
+    "F",        # Ford
+    "JPM",      # JPMorgan Chase
+    "V",        # Visa
+    "MA"        # Mastercard
+]
+
 
 # Display stock options
 print("Available stock symbols:")
