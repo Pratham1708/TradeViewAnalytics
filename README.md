@@ -48,9 +48,14 @@ Open this file in Power BI Desktop to interact with the visualizations.
 ```bash
 python main.py
 ```
-Then open dashboard.pbix in Power BI Desktop to view the analytics.
+1. Select a stock when prompted.
+2. The script will fetch the last 1 month of data and save it to last_month_stock_data.csv.
 
-Click Refresh under the Home tab in Power BI to load the latest stock data.
+## Open the Dashboard in Power BI
+
+1. Open dashboard.pbix in Power BI Desktop.
+2. Click Refresh under the Home tab to load the updated data.
+3. Use the stock slicer to select and explore the stock you fetched in Python.
 
 ## Directory Structure
 ```
@@ -58,6 +63,7 @@ TradeView Analytics/
 ├── main.py                      # Core data processing script
 ├── dashboard.pbix               # Power BI dashboard file
 ├── last_month_stock_data.csv    # Sample dataset
+├── stock_logos.csv              # Stock list with associated Clearbit logo URLs
 ├── .gitignore                   # Git ignore rules
 └── README.md                    # Project documentation
 ```
