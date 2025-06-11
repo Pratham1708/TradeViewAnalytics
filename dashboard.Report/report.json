@@ -1,0 +1,169 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.63\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ba8d5f544313b091a2bd",
+      "config": "{}",
+      "name": "413862e9e4c5de0b4ec9"
+    }
+  ],
+  "publicCustomVisuals": [
+    "imageDB603108E3FF4EBFB8047F5653368E8C"
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"331L\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}}}}]}}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ba8d5f544313b091a2bd",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0f1096804161255281b7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":944,\"y\":80,\"z\":5000,\"width\":336,\"height\":112,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(last_month_stock_data.Date)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"last_month_stock_data\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Date\"}},\"Function\":4},\"Name\":\"Min(last_month_stock_data.Date)\",\"NativeReferenceName\":\"Latest Date\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Date\"}},\"Function\":4}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 336.00,
+          "x": 944.00,
+          "y": 80.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"131fbf4d52b2e854eba8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":176,\"y\":80,\"z\":2000,\"width\":256,\"height\":112,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"last_month_stock_data.Latest Open Price\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"last_month_stock_data\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Latest Open Price\"},\"Name\":\"last_month_stock_data.Latest Open Price\",\"NativeReferenceName\":\"Latest Open Price\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Latest Open Price\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 256.00,
+          "x": 176.00,
+          "y": 80.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"1c507617569440a01e78\",\"layouts\":[{\"id\":0,\"position\":{\"x\":688,\"y\":480,\"z\":10000,\"width\":592,\"height\":144,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"last_month_stock_data.Date.Variation.Date Hierarchy.Day\"},{\"queryRef\":\"Sum(last_month_stock_data.open)\"},{\"queryRef\":\"Sum(last_month_stock_data.high)\"},{\"queryRef\":\"Sum(last_month_stock_data.low)\"},{\"queryRef\":\"Sum(last_month_stock_data.close)\"},{\"queryRef\":\"Sum(last_month_stock_data.volume)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"last_month_stock_data\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"},\"Name\":\"last_month_stock_data.Date.Variation.Date Hierarchy.Day\",\"NativeReferenceName\":\"Date Day\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"open\"},\"Name\":\"Sum(last_month_stock_data.open)\",\"NativeReferenceName\":\"open\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"high\"},\"Name\":\"Sum(last_month_stock_data.high)\",\"NativeReferenceName\":\"high\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"low\"},\"Name\":\"Sum(last_month_stock_data.low)\",\"NativeReferenceName\":\"low\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"close\"},\"Name\":\"Sum(last_month_stock_data.close)\",\"NativeReferenceName\":\"close1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"volume\"},\"Name\":\"Sum(last_month_stock_data.volume)\",\"NativeReferenceName\":\"volume\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"95.230849171613D\"}}}},\"selector\":{\"metadata\":\"last_month_stock_data.Date.Variation.Date Hierarchy.Day\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"88.96514959473237D\"}}}},\"selector\":{\"metadata\":\"Sum(last_month_stock_data.open)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"107.056033156073D\"}}}},\"selector\":{\"metadata\":\"Sum(last_month_stock_data.high)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"87.57348524912123D\"}}}},\"selector\":{\"metadata\":\"Sum(last_month_stock_data.low)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"91.74831694346804D\"}}}},\"selector\":{\"metadata\":\"Sum(last_month_stock_data.close)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"101.39871018631796D\"}}}},\"selector\":{\"metadata\":\"Sum(last_month_stock_data.volume)\"}}],\"values\":[{\"properties\":{\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"FillRule\":{\"Input\":{\"Aggregation\":{\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"last_month_stock_data\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"}},\"Function\":5}},\"FillRule\":{\"linearGradient3\":{\"min\":{\"color\":{\"Literal\":{\"Value\":\"'minColor'\"}}},\"mid\":{\"color\":{\"Literal\":{\"Value\":\"'#ec8fca'\"}}},\"max\":{\"color\":{\"Literal\":{\"Value\":\"'#e669b9'\"}}},\"nullColoringStrategy\":{\"strategy\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"last_month_stock_data.Date.Variation.Date Hierarchy.Day\"}},{\"properties\":{\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"FillRule\":{\"Input\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"last_month_stock_data\"}},\"Property\":\"open\"}},\"Function\":0}},\"FillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"Literal\":{\"Value\":\"'minColor'\"}}},\"max\":{\"color\":{\"Literal\":{\"Value\":\"'maxColor'\"}}},\"nullColoringStrategy\":{\"strategy\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"Sum(last_month_stock_data.open)\"}},{\"properties\":{\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"FillRule\":{\"Input\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"last_month_stock_data\"}},\"Property\":\"high\"}},\"Function\":0}},\"FillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"Literal\":{\"Value\":\"'minColor'\"}}},\"max\":{\"color\":{\"Literal\":{\"Value\":\"'#893395'\"}}},\"nullColoringStrategy\":{\"strategy\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"Sum(last_month_stock_data.high)\"}},{\"properties\":{\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"FillRule\":{\"Input\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"last_month_stock_data\"}},\"Property\":\"low\"}},\"Function\":0}},\"FillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"Literal\":{\"Value\":\"'minColor'\"}}},\"max\":{\"color\":{\"Literal\":{\"Value\":\"'#333333'\"}}},\"nullColoringStrategy\":{\"strategy\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"FillRule\":{\"Input\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"last_month_stock_data\"}},\"Property\":\"low\"}},\"Function\":0}},\"FillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"Literal\":{\"Value\":\"'#000000'\"}}},\"max\":{\"color\":{\"Literal\":{\"Value\":\"'maxColor'\"}}},\"nullColoringStrategy\":{\"strategy\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"Sum(last_month_stock_data.low)\"}},{\"properties\":{\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"FillRule\":{\"Input\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"last_month_stock_data\"}},\"Property\":\"close\"}},\"Function\":0}},\"FillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"Literal\":{\"Value\":\"'minColor'\"}}},\"max\":{\"color\":{\"Literal\":{\"Value\":\"'#850000'\"}}},\"nullColoringStrategy\":{\"strategy\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"FillRule\":{\"Input\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"last_month_stock_data\"}},\"Property\":\"close\"}},\"Function\":0}},\"FillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"Literal\":{\"Value\":\"'#000000'\"}}},\"max\":{\"color\":{\"Literal\":{\"Value\":\"'#09124f'\"}}},\"nullColoringStrategy\":{\"strategy\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"Sum(last_month_stock_data.close)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Daily Stock Data'\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 144.00,
+          "width": 592.00,
+          "x": 688.00,
+          "y": 480.00,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"293c5f7d0370b06a7d91\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":7000,\"width\":848,\"height\":80,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"ONE MONTH STOCK DASHBOARD\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Times New Roman\",\"fontSize\":\"36pt\",\"color\":\"#09124f\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#E40000'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 80.00,
+          "width": 848.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"38431747b22005a506cc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":8000,\"tabOrder\":12000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"444d7edb160604a56b18\",\"layouts\":[{\"id\":0,\"position\":{\"x\":431.99999999999994,\"y\":80,\"z\":3000,\"width\":256,\"height\":112,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Max(last_month_stock_data.high)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"last_month_stock_data\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"high\"}},\"Function\":4},\"Name\":\"Max(last_month_stock_data.high)\",\"NativeReferenceName\":\"High Price\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"high\"}},\"Function\":4}}}]},\"columnProperties\":{\"Max(last_month_stock_data.high)\":{\"displayName\":\"High Price\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 256.00,
+          "x": 432.00,
+          "y": 80.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"45bb20cf6bc879956154\",\"layouts\":[{\"id\":0,\"position\":{\"x\":944,\"y\":0,\"z\":12000,\"width\":336,\"height\":80,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"last_month_stock_data.symbol\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"last_month_stock_data\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"symbol\"},\"Name\":\"last_month_stock_data.symbol\",\"NativeReferenceName\":\"symbol\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"last_month_stock_data\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"symbol\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'SBUX'\"}}]]}}}]}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Symbol'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Arial Black'''\"}}},\"showRestatement\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}],\"items\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"italic\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"underline\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"outlineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"padding\":{\"expr\":{\"Literal\":{\"Value\":\"4D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0.2}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 80.00,
+          "width": 336.00,
+          "x": 944.00,
+          "y": 0.00,
+          "z": 12000.00
+        },
+        {
+          "config": "{\"name\":\"4db8c711a0b567c0b0d7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":80,\"z\":1000,\"width\":176,\"height\":112,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"last_month_stock_data.Latest Close Price\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"last_month_stock_data\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Latest Close Price\"},\"Name\":\"last_month_stock_data.Latest Close Price\",\"NativeReferenceName\":\"Latest Close Price\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Latest Close Price\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 176.00,
+          "x": 0.00,
+          "y": 80.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"823f61b98a04d867cbc5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":192,\"z\":0,\"width\":1280,\"height\":144,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"last_month_stock_data.Date.Variation.Date Hierarchy.Day\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(last_month_stock_data.close)\"}],\"Series\":[{\"queryRef\":\"last_month_stock_data.symbol\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"last_month_stock_data\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"},\"Name\":\"last_month_stock_data.Date.Variation.Date Hierarchy.Day\",\"NativeReferenceName\":\"Date Day\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"close\"}},\"Function\":0},\"Name\":\"Sum(last_month_stock_data.close)\",\"NativeReferenceName\":\"Sum of close\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"symbol\"},\"Name\":\"last_month_stock_data.symbol\",\"NativeReferenceName\":\"symbol\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"lineStyles\":[{\"properties\":{\"lineChartType\":{\"expr\":{\"Literal\":{\"Value\":\"'smooth'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Closing Price Trend'\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 144.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 192.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"9d1956b4d8a409103011\",\"layouts\":[{\"id\":0,\"position\":{\"x\":848,\"y\":0,\"z\":13000,\"width\":96,\"height\":80,\"tabOrder\":13000}}],\"singleVisual\":{\"visualType\":\"imageDB603108E3FF4EBFB8047F5653368E8C\",\"projections\":{\"imageUrl\":[{\"queryRef\":\"stock_logos.logo_url\"}],\"tooltipData\":[{\"queryRef\":\"stock_logos.symbol\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"stock_logos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"logo_url\"},\"Name\":\"stock_logos.logo_url\",\"NativeReferenceName\":\"logo_url\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"symbol\"},\"Name\":\"stock_logos.symbol\",\"NativeReferenceName\":\"symbol\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 80.00,
+          "width": 96.00,
+          "x": 848.00,
+          "y": 0.00,
+          "z": 13000.00
+        },
+        {
+          "config": "{\"name\":\"ab4610b50400507da46a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":624,\"z\":11000,\"width\":1280,\"height\":96,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"last_month_stock_data.Date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"last_month_stock_data\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Date\"},\"Name\":\"last_month_stock_data.Date\",\"NativeReferenceName\":\"Date\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"startDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2025-03-18T00:00:00'\"}}},\"endDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2025-04-29T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"header\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0.2}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 96.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 624.00,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"bbc9e727d10a438b4754\",\"layouts\":[{\"id\":0,\"position\":{\"x\":687.9999999999999,\"y\":80,\"z\":4000,\"width\":256,\"height\":112,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(last_month_stock_data.low)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"last_month_stock_data\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"low\"}},\"Function\":3},\"Name\":\"Sum(last_month_stock_data.low)\",\"NativeReferenceName\":\"Low Price\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"low\"}},\"Function\":3}}}]},\"columnProperties\":{\"Sum(last_month_stock_data.low)\":{\"displayName\":\"Low Price\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 256.00,
+          "x": 688.00,
+          "y": 80.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"e0bbb805043d419d5536\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":336,\"z\":6000,\"width\":1280,\"height\":144,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"last_month_stock_data.Date.Variation.Date Hierarchy.Day\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(last_month_stock_data.volume)\"}],\"Y2\":[{\"queryRef\":\"Sum(last_month_stock_data.close)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"last_month_stock_data\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"},\"Name\":\"last_month_stock_data.Date.Variation.Date Hierarchy.Day\",\"NativeReferenceName\":\"Date Day\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"volume\"}},\"Function\":0},\"Name\":\"Sum(last_month_stock_data.volume)\",\"NativeReferenceName\":\"Sum of volume\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"close\"}},\"Function\":5},\"Name\":\"Sum(last_month_stock_data.close)\",\"NativeReferenceName\":\"Count of close\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#48FF0C'\"}}}}}},\"selector\":{\"metadata\":\"Sum(last_month_stock_data.close)\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#118dff'\"}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Price and Volume Comparison'\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0.6}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 144.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 336.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"f04af2d3401e22381985\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":480,\"z\":9000,\"width\":688,\"height\":144,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"last_month_stock_data.Date.Variation.Date Hierarchy.Day\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(last_month_stock_data.volume)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"last_month_stock_data\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"},\"Name\":\"last_month_stock_data.Date.Variation.Date Hierarchy.Day\",\"NativeReferenceName\":\"Date Day\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"volume\"}},\"Function\":0},\"Name\":\"Sum(last_month_stock_data.volume)\",\"NativeReferenceName\":\"Sum of volume\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Daily Volume'\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 144.00,
+          "width": 688.00,
+          "x": 0.00,
+          "y": 480.00,
+          "z": 9000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

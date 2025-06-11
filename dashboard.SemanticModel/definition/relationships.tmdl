@@ -1,0 +1,11 @@
+relationship a3ee77ed-d819-4c7f-a158-b44829afd314
+	joinOnDateBehavior: datePartOnly
+	fromColumn: last_month_stock_data.Date
+	toColumn: LocalDateTable_b650a94e-4483-49c1-9a1c-74796154e7cb.Date
+
+relationship 441076b4-f7bb-6b5a-a4be-d600bf106a85
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	fromColumn: last_month_stock_data.symbol
+	toColumn: stock_logos.symbol
+

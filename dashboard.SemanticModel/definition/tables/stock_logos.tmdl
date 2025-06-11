@@ -1,0 +1,31 @@
+table stock_logos
+	lineageTag: e0353fb6-22e7-4a8d-91d4-5aa9d3dd56e1
+
+	column symbol
+		dataType: string
+		lineageTag: 927cf962-45a2-43d3-96e6-845f670333fd
+		summarizeBy: none
+		sourceColumn: symbol
+
+		annotation SummarizationSetBy = Automatic
+
+	column logo_url
+		dataType: string
+		lineageTag: 45a7841c-39ba-4e03-85fc-03df6aebc0be
+		summarizeBy: none
+		sourceColumn: logo_url
+
+		annotation SummarizationSetBy = Automatic
+
+	partition stock_logos = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\jinda\OneDrive\Desktop\Projects\TradeView Analytics\stock_logos.csv"),[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Column1", "symbol"}, {"Column2", "logo_url"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+

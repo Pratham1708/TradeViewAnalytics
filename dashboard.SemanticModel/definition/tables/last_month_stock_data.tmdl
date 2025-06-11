@@ -1,0 +1,130 @@
+table last_month_stock_data
+	lineageTag: 9afc30c6-3db8-4e27-989a-cab00799afa0
+
+	measure 'Latest Close Price' = ```
+			
+			CALCULATE(
+			    MAX('last_month_stock_data'[close]),
+			    FILTER('last_month_stock_data', 'last_month_stock_data'[Date] = MAX('last_month_stock_data'[Date]))
+			)
+			
+			```
+		lineageTag: 6bdeaab5-0cdc-44b2-898c-fbc5b89d2ff8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Latest Open Price' =
+			
+			CALCULATE(
+			    MAX('last_month_stock_data'[open]),
+			    FILTER('last_month_stock_data', 'last_month_stock_data'[Date] = MAX('last_month_stock_data'[Date]))
+			)
+		lineageTag: e7575982-4539-4474-be10-46cf173b5385
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Latest High Price' =
+			
+			CALCULATE(
+			    MAX('last_month_stock_data'[high]),
+			    FILTER('last_month_stock_data', 'last_month_stock_data'[Date] = MAX('last_month_stock_data'[Date]))
+			)
+		lineageTag: e4fd5a16-5e4e-40de-8057-e78196b1da18
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Latest Low Price' =
+			
+			CALCULATE(
+			    MAX('last_month_stock_data'[low]),
+			    FILTER('last_month_stock_data', 'last_month_stock_data'[Date] = MAX('last_month_stock_data'[Date]))
+			)
+		lineageTag: eee5f740-0386-49c6-9c7b-dfafb10cb9c2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2e0d5408-8017-4041-b10d-ecdffcf648e7
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: a3ee77ed-d819-4c7f-a158-b44829afd314
+			defaultHierarchy: LocalDateTable_b650a94e-4483-49c1-9a1c-74796154e7cb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column symbol
+		dataType: string
+		lineageTag: b394ac0f-8725-4d8f-9f97-8599ff5c711b
+		summarizeBy: none
+		sourceColumn: symbol
+
+		annotation SummarizationSetBy = Automatic
+
+	column open
+		dataType: double
+		lineageTag: a22f3591-b2cd-43d8-bb23-54a9dea02e25
+		summarizeBy: sum
+		sourceColumn: open
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column high
+		dataType: double
+		lineageTag: 75cfd5c8-4271-42e8-acab-163e4e888ed2
+		summarizeBy: max
+		sourceColumn: high
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column low
+		dataType: double
+		lineageTag: 356c068f-17c8-40ec-a298-49d4febc9c0c
+		summarizeBy: min
+		sourceColumn: low
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column close
+		dataType: double
+		lineageTag: 6e831a4c-fd0c-45d4-9fc5-721f5532d96a
+		summarizeBy: sum
+		sourceColumn: close
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column volume
+		dataType: int64
+		formatString: 0
+		lineageTag: 92a00253-f525-4680-9477-84890427ee54
+		summarizeBy: sum
+		sourceColumn: volume
+
+		annotation SummarizationSetBy = Automatic
+
+	partition last_month_stock_data = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\jinda\OneDrive\Desktop\Projects\TradeView Analytics\last_month_stock_data.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Date", type date}, {"symbol", type text}, {"open", type number}, {"high", type number}, {"low", type number}, {"close", type number}, {"volume", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
